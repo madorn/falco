@@ -30,7 +30,7 @@ LABEL usage="docker run -i -t --privileged -v /var/run/docker.sock:/host/var/run
 ENV HOST_ROOT /host
 ENV HOME /root
 
-RUN yum install kmod -y
+RUN yum install kmod dkms -y
 
 COPY --from=ubuntu /falco /
 
